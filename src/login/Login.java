@@ -26,6 +26,7 @@ public class Login {
     }// END of 1st Method
      
         //2nd Method
+    //References for the Method
     /*
     *Title: How can i perform validation on a secure password. Regular expressions on a cgar[]?
     *Author: E.Frisch
@@ -59,7 +60,7 @@ boolean hasSpecialChar = false;
     
         //3rd Method
     public static boolean checkCellPhoneNumber(String cellphonenumber){
-         //Check cellphone number requirements
+         //Check cellphone number requirements, using international code for RSA
          boolean countryCode = cellphonenumber.contains("+27");
          boolean length = cellphonenumber.length()==12;
              if(cellphonenumber.contains("+27") && cellphonenumber.length()==12){
@@ -71,7 +72,7 @@ boolean hasSpecialChar = false;
     
         //4th Method
     public static String registerUser(String username, String password, String cellphonenumber ){
-        //Required fields to Register the user
+        //Required fields to Register the user(Loops until condition is met)
           if(!checkUserName(username)){
               return"Incorrect username,please ensure that username contains an underscore and is not more than 5 characters";
           }else if(!checkPasswordComplexity(password)){
@@ -120,7 +121,7 @@ boolean hasSpecialChar = false;
          //Create a Scanner object to read input from the console
         Scanner input = new Scanner(System.in);
         
-        //Capture user details
+        //Capture user details(According to the requirements)
                  System.out.println("Please enter your first name:");
                 String firstName = input.nextLine();
                System.out.println("Please enter your last name:");
@@ -137,7 +138,7 @@ boolean hasSpecialChar = false;
                      System.out.println("Username is incorrectly formatted, please ensure it must have an underscore and must not be more than 5 character long");
                 }
                }//
-         //Request users password and ensure it is valid
+         //Request users password and ensure it is valid(Make use of the required fields)
          while(true){
          System.out.println("Create password");
            String password = input.nextLine();
